@@ -60,14 +60,14 @@ export function AboutSection({ onOpenBooking }: { onOpenBooking: () => void }) {
             </ScrollReveal>
           </div>
 
-          {/* Real Customer Support Team Photography Right (6 cols) */}
+          {/* Real Black Customer Support Team Photography Right (6 cols) */}
           <div className="lg:col-span-6">
             <ScrollReveal direction="left" delay={150}>
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-[#dedbd6] shadow-xs group">
                   <Image
-                    src="/assets/customer_support_specialist_2.jpg"
-                    alt="Customer service representative with headset smiling at desk"
+                    src="/assets/agent_black_woman_headset_4.jpg"
+                    alt="African customer service representative with headset smiling at desk"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500 object-center"
                     sizes="300px"
@@ -81,8 +81,8 @@ export function AboutSection({ onOpenBooking }: { onOpenBooking: () => void }) {
 
                 <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-[#dedbd6] shadow-xs group">
                   <Image
-                    src="/assets/customer_support_team.jpg"
-                    alt="HELIOS customer support operations team at work"
+                    src="/assets/agent_black_woman_blazer.jpg"
+                    alt="HELIOS customer support operations specialist in blazer"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500 object-center"
                     sizes="300px"

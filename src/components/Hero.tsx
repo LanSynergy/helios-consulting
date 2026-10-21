@@ -124,17 +124,17 @@ export function Hero({ onOpenBooking }: { onOpenBooking: () => void }) {
 
           </div>
 
-          {/* Right Column (6 cols): Real Customer Service Agents in Action */}
+          {/* Right Column (6 cols): Real Black Customer Support Specialists with Headsets in Action */}
           <div className="lg:col-span-6 relative">
             <ScrollReveal direction="left" delay={150}>
               <div className="relative space-y-3.5">
                 
-                {/* Primary Card: Real Customer Support Specialist on Live Shift */}
+                {/* Primary Card: Real Black Customer Support Specialist Wearing Headset on Live Shift */}
                 <MagneticCard intensity={4} className="w-full">
                   <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border border-[#dedbd6] shadow-md bg-white group">
                     <Image
-                      src="/assets/customer_support_specialist_1.jpg"
-                      alt="Dedicated HELIOS customer support specialist with headset resolving customer inquiry"
+                      src="/assets/agent_black_woman_headset_1.jpg"
+                      alt="Dedicated HELIOS customer support specialist with headset resolving customer inquiry from Kigali"
                       fill
                       className="object-cover group-hover:scale-102 transition-transform duration-500 object-center"
                       priority
@@ -162,27 +162,27 @@ export function Hero({ onOpenBooking }: { onOpenBooking: () => void }) {
                   </div>
                 </MagneticCard>
 
-                {/* 2 Bottom Specialist Photos */}
+                {/* 2 Bottom Specialist Photos: Black Specialists at Workstations */}
                 <div className="grid grid-cols-2 gap-3.5">
                   <div className="relative aspect-[16/10] rounded-xl overflow-hidden border border-[#dedbd6] shadow-xs group">
                     <Image
-                      src="/assets/customer_support_team.jpg"
-                      alt="HELIOS customer operations team collaborating at support desk"
+                      src="/assets/agent_black_man_headset_1.jpg"
+                      alt="Black customer support representative with headset providing technical support"
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500 object-center"
                       sizes="300px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-2.5">
                       <span className="text-[10px] text-white font-mono font-medium">
-                        Collaborative Support Pod · Kigali
+                        Senior Tier-1 Specialist · Kigali
                       </span>
                     </div>
                   </div>
 
                   <div className="relative aspect-[16/10] rounded-xl overflow-hidden border border-[#dedbd6] shadow-xs group">
                     <Image
-                      src="/assets/customer_support_agent_male.jpg"
-                      alt="Bilingual customer support specialist reviewing tickets on laptop"
+                      src="/assets/agent_black_woman_headset_2.jpg"
+                      alt="Bilingual support agent with headset handling live inquiries on laptop"
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500 object-center"
                       sizes="300px"

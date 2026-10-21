@@ -25,7 +25,7 @@ export function ServicesSection({ onOpenBooking }: { onOpenBooking: () => void }
         "Structured tagging for bug triage and engineering escalation",
         "Fluent English and French bilingual coverage",
       ],
-      image: "/assets/customer_support_call.jpg",
+      image: "/assets/agent_black_woman_headset_3.jpg",
       imageCaption: "Dedicated representative answering customer email inquiries",
     },
     {
@@ -42,7 +42,7 @@ export function ServicesSection({ onOpenBooking }: { onOpenBooking: () => void }
         "Step-by-step screenshare guidance for tricky user issues",
         "Clear internal handoffs when routing to account managers",
       ],
-      image: "/assets/customer_support_specialist_1.jpg",
+      image: "/assets/agent_black_woman_headset_1.jpg",
       imageCaption: "Live chat specialist with headset resolving customer questions",
     },
     {
@@ -59,7 +59,7 @@ export function ServicesSection({ onOpenBooking }: { onOpenBooking: () => void }
         "Direct ticket creation in Linear or Jira for your engineering squad",
         "Knowledge base articles updated whenever bugs are patched",
       ],
-      image: "/assets/customer_support_agent_male.jpg",
+      image: "/assets/agent_black_man_headset_1.jpg",
       imageCaption: "Technical tier-1 specialist debugging user reproduction logs",
     },
     {
@@ -76,7 +76,7 @@ export function ServicesSection({ onOpenBooking }: { onOpenBooking: () => void }
         "Fast manual verification queues to prevent onboarding churn",
         "Refund processing within agreed financial limits",
       ],
-      image: "/assets/customer_support_specialist_2.jpg",
+      image: "/assets/agent_black_woman_blazer.jpg",
       imageCaption: "Operations specialist performing identity verification & queue audits",
     },
   ];
@@ -147,7 +147,7 @@ export function ServicesSection({ onOpenBooking }: { onOpenBooking: () => void }
                       }`}>
                         <Icon className="w-3.5 h-3.5" />
                       </div>
-                      <span className="font-mono text-[10px.5] uppercase tracking-wider text-[#888888] font-medium">
+                      <span className="font-mono text-[10.5px] uppercase tracking-wider text-[#888888] font-medium">
                         {item.category}
                       </span>
                     </div>
@@ -172,7 +172,7 @@ export function ServicesSection({ onOpenBooking }: { onOpenBooking: () => void }
             })}
           </div>
 
-          {/* Right Column (7 cols): Real Customer Service Photography & Checklist */}
+          {/* Right Column (7 cols): Real Black Customer Service Photography with Headsets & Checklist */}
           <div className="lg:col-span-7">
             <ScrollReveal direction="left" delay={150}>
               <MagneticCard intensity={3} className="w-full">
