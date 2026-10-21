@@ -60,19 +60,19 @@ export function AboutSection({ onOpenBooking }: { onOpenBooking: () => void }) {
             </ScrollReveal>
           </div>
 
-          {/* Visual Showcase Right (6 cols) */}
+          {/* Real Customer Support Team Photography Right (6 cols) */}
           <div className="lg:col-span-6">
             <ScrollReveal direction="left" delay={150}>
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-[#dedbd6] shadow-xs group">
                   <Image
-                    src="/assets/2dcaeebc2955b38c99681a4f39bce61138bf703a-423x525.jpg"
-                    alt="HELIOS customer support team member collaborating in Kigali"
+                    src="/assets/customer_support_specialist_2.jpg"
+                    alt="Customer service representative with headset smiling at desk"
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500 object-center"
                     sizes="300px"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-3.5">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-3.5">
                     <span className="text-white text-xs font-mono font-medium">
                       Bilingual Specialists · Kigali
                     </span>
@@ -81,13 +81,13 @@ export function AboutSection({ onOpenBooking }: { onOpenBooking: () => void }) {
 
                 <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-[#dedbd6] shadow-xs group">
                   <Image
-                    src="/assets/b74422e2810cec5a7a9629cdff2a2eaf1f432fe2-423x525.webp"
-                    alt="Operations pod workstation"
+                    src="/assets/customer_support_team.jpg"
+                    alt="HELIOS customer support operations team at work"
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500 object-center"
                     sizes="300px"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-3.5">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-3.5">
                     <span className="text-white text-xs font-mono font-medium">
                       Continuous QA & Mentorship
                     </span>

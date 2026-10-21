@@ -25,8 +25,8 @@ export function ServicesSection({ onOpenBooking }: { onOpenBooking: () => void }
         "Structured tagging for bug triage and engineering escalation",
         "Fluent English and French bilingual coverage",
       ],
-      image: "/assets/059c3c0967b844a45fff7dfd28ba680d29d189d7-1480x1240.webp",
-      imageCaption: "Live inbox triage across email and helpdesk queues",
+      image: "/assets/customer_support_call.jpg",
+      imageCaption: "Dedicated representative answering customer email inquiries",
     },
     {
       id: "chat",
@@ -42,8 +42,8 @@ export function ServicesSection({ onOpenBooking }: { onOpenBooking: () => void }
         "Step-by-step screenshare guidance for tricky user issues",
         "Clear internal handoffs when routing to account managers",
       ],
-      image: "/assets/74131fc60fbfa8f1acf63696645b2fcd14f81c9e-1480x1240.webp",
-      imageCaption: "In-app messaging and customer troubleshooting",
+      image: "/assets/customer_support_specialist_1.jpg",
+      imageCaption: "Live chat specialist with headset resolving customer questions",
     },
     {
       id: "tech",
@@ -59,8 +59,8 @@ export function ServicesSection({ onOpenBooking }: { onOpenBooking: () => void }
         "Direct ticket creation in Linear or Jira for your engineering squad",
         "Knowledge base articles updated whenever bugs are patched",
       ],
-      image: "/assets/2c4d4c23cb6427f422f41645141866fe058ba19b-2000x1501.webp",
-      imageCaption: "Technical bug reproduction and escalation queue",
+      image: "/assets/customer_support_agent_male.jpg",
+      imageCaption: "Technical tier-1 specialist debugging user reproduction logs",
     },
     {
       id: "backoffice",
@@ -76,8 +76,8 @@ export function ServicesSection({ onOpenBooking }: { onOpenBooking: () => void }
         "Fast manual verification queues to prevent onboarding churn",
         "Refund processing within agreed financial limits",
       ],
-      image: "/assets/a370395864037e00e998983a510ee1477640c573-2544x1904.jpg",
-      imageCaption: "Back-office identity verification and data compliance",
+      image: "/assets/customer_support_specialist_2.jpg",
+      imageCaption: "Operations specialist performing identity verification & queue audits",
     },
   ];
 
@@ -147,7 +147,7 @@ export function ServicesSection({ onOpenBooking }: { onOpenBooking: () => void }
                       }`}>
                         <Icon className="w-3.5 h-3.5" />
                       </div>
-                      <span className="font-mono text-[10.5px] uppercase tracking-wider text-[#888888] font-medium">
+                      <span className="font-mono text-[10px.5] uppercase tracking-wider text-[#888888] font-medium">
                         {item.category}
                       </span>
                     </div>
@@ -172,7 +172,7 @@ export function ServicesSection({ onOpenBooking }: { onOpenBooking: () => void }
             })}
           </div>
 
-          {/* Right Column (7 cols): Interactive Product Canvas & Metric Screen */}
+          {/* Right Column (7 cols): Real Customer Service Photography & Checklist */}
           <div className="lg:col-span-7">
             <ScrollReveal direction="left" delay={150}>
               <MagneticCard intensity={3} className="w-full">
@@ -193,16 +193,16 @@ export function ServicesSection({ onOpenBooking }: { onOpenBooking: () => void }
                     </span>
                   </div>
 
-                  {/* Primary Visual Image */}
+                  {/* Primary Visual Customer Service Image */}
                   <div className="relative aspect-[16/10] w-full bg-white overflow-hidden group">
                     <Image
                       src={current.image}
                       alt={current.title}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-102"
+                      className="object-cover transition-transform duration-500 group-hover:scale-102 object-center"
                       sizes="(max-width: 1024px) 100vw, 700px"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent flex items-end p-5">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent flex items-end p-5">
                       <div className="text-white space-y-1">
                         <div className="font-mono text-[10.5px] text-emerald-300 uppercase tracking-wider flex items-center gap-1.5">
                           <Sparkles className="w-3.5 h-3.5" />

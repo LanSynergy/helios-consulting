@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { Check, Shield, Clock, ArrowRight, Calendar, Users, Sparkles } from "lucide-react";
+import { Check, Shield, Clock, ArrowRight, Calendar, Users, Sparkles, Headphones } from "lucide-react";
 import { LetterSwap } from "./fancy/LetterSwap";
 import { ElasticLine } from "./fancy/ElasticLine";
 import { MagneticCard } from "./fancy/MagneticCard";
@@ -24,10 +24,10 @@ export function Hero({ onOpenBooking }: { onOpenBooking: () => void }) {
         
         {/* Top Operational Pill Tag */}
         <div className="mb-5">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#eceae5] border border-[#dedbd6] rounded-full shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-[#eceae5] border border-[#dedbd6] rounded-full shadow-xs">
             <span className="w-2 h-2 rounded-full bg-[#2563eb] animate-pulse" />
             <span className="font-mono text-[10px] tracking-[1.4px] uppercase text-[#111111] font-semibold">
-              KIGALI SUPPORT PODS · BILINGUAL (EN/FR)
+              KIGALI CUSTOMER SUPPORT PODS · BILINGUAL (EN/FR)
             </span>
           </div>
         </div>
@@ -48,7 +48,7 @@ export function Hero({ onOpenBooking }: { onOpenBooking: () => void }) {
 
             {/* Lean 1-Sentence Subtitle */}
             <p className="font-serif italic font-light text-[18px] sm:text-[20px] text-[#555555] leading-snug max-w-xl text-left">
-              Dedicated bilingual agents in Kigali answering your tickets, live chat, and back-office queues at 65% less cost.
+              Dedicated bilingual customer service specialists in Kigali answering your tickets, live chat, and back-office queues at 65% less cost.
             </p>
 
             {/* Primary Action Button Bar */}
@@ -74,7 +74,7 @@ export function Hero({ onOpenBooking }: { onOpenBooking: () => void }) {
               </a>
             </div>
 
-            {/* Scannable Stat Chips - Visual credibility without text blocks */}
+            {/* Scannable Stat Chips */}
             <div className="grid grid-cols-3 gap-3 pt-3 max-w-lg">
               <div className="bg-[#ffffff] border border-[#dedbd6] rounded-xl p-3 shadow-xs">
                 <div className="text-[18px] font-bold text-[#2563eb] font-mono leading-none">
@@ -124,19 +124,19 @@ export function Hero({ onOpenBooking }: { onOpenBooking: () => void }) {
 
           </div>
 
-          {/* Right Column (6 cols): Visual Workstation UI with Live Specialist Imagery */}
+          {/* Right Column (6 cols): Real Customer Service Agents in Action */}
           <div className="lg:col-span-6 relative">
             <ScrollReveal direction="left" delay={150}>
               <div className="relative space-y-3.5">
                 
-                {/* Visual Workstation Frame */}
+                {/* Primary Card: Real Customer Support Specialist on Live Shift */}
                 <MagneticCard intensity={4} className="w-full">
                   <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border border-[#dedbd6] shadow-md bg-white group">
                     <Image
-                      src="/assets/059c3c0967b844a45fff7dfd28ba680d29d189d7-1480x1240.webp"
-                      alt="HELIOS customer support operations pod in Kigali"
+                      src="/assets/customer_support_specialist_1.jpg"
+                      alt="Dedicated HELIOS customer support specialist with headset resolving customer inquiry"
                       fill
-                      className="object-cover group-hover:scale-102 transition-transform duration-500"
+                      className="object-cover group-hover:scale-102 transition-transform duration-500 object-center"
                       priority
                       sizes="(max-width: 1024px) 100vw, 600px"
                     />
@@ -144,19 +144,19 @@ export function Hero({ onOpenBooking }: { onOpenBooking: () => void }) {
                     {/* Top Status HUD */}
                     <div className="absolute top-3 left-3 bg-[#111111]/85 backdrop-blur-xs text-white text-[10.5px] font-mono px-3 py-1 rounded-full flex items-center gap-2 border border-white/20">
                       <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                      <span>Kigali Support Station · UTC+2 Active</span>
+                      <span>Kigali Support Station · Live Shift</span>
                     </div>
 
                     {/* Bottom Floating Telemetry Strip */}
                     <div className="absolute bottom-3 left-3 right-3 bg-[#ffffff]/95 backdrop-blur-md px-4 py-2.5 rounded-xl border border-[#dedbd6] flex items-center justify-between text-[11.5px] shadow-xs">
                       <div className="flex items-center gap-2">
-                        <Users className="w-4 h-4 text-[#2563eb]" />
-                        <span className="text-[#666666]">Queue:</span>
-                        <strong className="text-[#111111] font-mono">{activeQueueCount} active</strong>
+                        <Headphones className="w-4 h-4 text-[#2563eb]" />
+                        <span className="text-[#666666]">Active Queue:</span>
+                        <strong className="text-[#111111] font-mono">{activeQueueCount} tickets</strong>
                       </div>
                       <div className="text-right">
                         <span className="text-[#666666]">Avg SLA:</span>{" "}
-                        <strong className="text-[#2563eb] font-mono">11m (99.4%)</strong>
+                        <strong className="text-[#2563eb] font-mono">11m (99.4% CSAT)</strong>
                       </div>
                     </div>
                   </div>
@@ -166,30 +166,30 @@ export function Hero({ onOpenBooking }: { onOpenBooking: () => void }) {
                 <div className="grid grid-cols-2 gap-3.5">
                   <div className="relative aspect-[16/10] rounded-xl overflow-hidden border border-[#dedbd6] shadow-xs group">
                     <Image
-                      src="/assets/f3537134afdca56c6c95cc7e598af56bbc3dfd87-600x825.webp"
-                      alt="Senior bilingual customer support specialist"
+                      src="/assets/customer_support_team.jpg"
+                      alt="HELIOS customer operations team collaborating at support desk"
                       fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500 object-center"
                       sizes="300px"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-2.5">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-2.5">
                       <span className="text-[10px] text-white font-mono font-medium">
-                        Senior Tier-1 Specialist · Kigali
+                        Collaborative Support Pod · Kigali
                       </span>
                     </div>
                   </div>
 
                   <div className="relative aspect-[16/10] rounded-xl overflow-hidden border border-[#dedbd6] shadow-xs group">
                     <Image
-                      src="/assets/33589346d03d1fe689cc38aaa4cfad8d7b849cb0-600x750.webp"
-                      alt="Dedicated agent workflow"
+                      src="/assets/customer_support_agent_male.jpg"
+                      alt="Bilingual customer support specialist reviewing tickets on laptop"
                       fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500 object-center"
                       sizes="300px"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-2.5">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-2.5">
                       <span className="text-[10px] text-white font-mono font-medium">
-                        Bilingual Pod · EN / FR
+                        Bilingual Specialist · EN / FR
                       </span>
                     </div>
                   </div>
