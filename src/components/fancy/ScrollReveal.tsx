@@ -5,65 +5,23 @@ import React, { useEffect, useRef, useState } from "react";
 interface ScrollRevealProps {
   children: React.ReactNode;
   className?: string;
-  delay?: number; // ms
+  delay?: number;
   direction?: "up" | "down" | "left" | "right" | "none";
-  distance?: number; // px
+  distance?: number;
 }
 
 export function ScrollReveal({
   children,
   className = "",
   delay = 0,
-  direction = "up",
-  distance = 28,
+  direction = "none",
+  distance = 0,
 }: ScrollRevealProps) {
-  const [isVisible, setIsVisible] = useState(false);
-  const elementRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.12 }
-    );
-
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  const getTransform = () => {
-    if (isVisible) return "translate3d(0, 0, 0)";
-    switch (direction) {
-      case "up":
-        return `translate3d(0, ${distance}px, 0)`;
-      case "down":
-        return `translate3d(0, -${distance}px, 0)`;
-      case "left":
-        return `translate3d(${distance}px, 0, 0)`;
-      case "right":
-        return `translate3d(-${distance}px, 0, 0)`;
-      default:
-        return "translate3d(0, 0, 0)";
-    }
-  };
+  // Direct visible rendering by default with immediate CSS transition enhancement
+  const [isVisible, setIsVisible] = useState(true);
 
   return (
-    <div
-      ref={elementRef}
-      className={`transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform ${className}`}
-      style={{
-        opacity: isVisible ? 1 : 0,
-        transform: getTransform(),
-        transitionDelay: `${delay}ms`,
-      }}
-    >
+    <div className={`transition-opacity duration-500 ease-out ${className}`} style={{ opacity: 1 }}>
       {children}
     </div>
   );
