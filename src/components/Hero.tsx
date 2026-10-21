@@ -2,11 +2,9 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { Check, Shield, Clock, ArrowRight, Calendar, Users, Building2, Globe2 } from "lucide-react";
-import { VerticalCutReveal } from "./fancy/VerticalCutReveal";
+import { Check, Shield, Clock, ArrowRight, Calendar, Users, Sparkles } from "lucide-react";
 import { LetterSwap } from "./fancy/LetterSwap";
 import { ElasticLine } from "./fancy/ElasticLine";
-import { ScrambleText } from "./fancy/ScrambleText";
 import { MagneticCard } from "./fancy/MagneticCard";
 import { ScrollReveal } from "./fancy/ScrollReveal";
 
@@ -21,166 +19,177 @@ export function Hero({ onOpenBooking }: { onOpenBooking: () => void }) {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-[#faf9f6] pt-12 pb-16 md:pt-16 md:pb-20 border-b border-[#dedbd6]">
+    <section className="relative overflow-hidden bg-[#faf9f6] pt-10 pb-16 md:pt-14 md:pb-20 border-b border-[#dedbd6]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         
         {/* Top Operational Pill Tag */}
-        <div className="mb-6">
-          <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 bg-[#eceae5] border border-[#dedbd6] rounded-full shadow-xs">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2563eb] opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#2563eb]" />
+        <div className="mb-5">
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#eceae5] border border-[#dedbd6] rounded-full shadow-xs">
+            <span className="w-2 h-2 rounded-full bg-[#2563eb] animate-pulse" />
+            <span className="font-mono text-[10px] tracking-[1.4px] uppercase text-[#111111] font-semibold">
+              KIGALI SUPPORT PODS · BILINGUAL (EN/FR)
             </span>
-            <ScrambleText
-              text="OUTSOURCED CUSTOMER SUPPORT · KIGALI HUB · BILINGUAL (EN/FR)"
-              className="text-[10px] tracking-[1.4px] uppercase text-[#111111] font-medium"
-            />
           </div>
         </div>
 
-        {/* 2-Column Split: Editorial Left (Headline & Subtext) | Visual Right (Active Workstation & Agent Showcase) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        {/* Asymmetrical 2-Column Grid (Ramp & Intercom Mobbin Pattern) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
-          {/* Left Column (7 cols): Left-aligned Headline + Compact Subheading + Dual CTAs */}
-          <div className="lg:col-span-7 space-y-6">
+          {/* Left Column (6 cols): Ultra-punchy, low cognitive load */}
+          <div className="lg:col-span-6 space-y-5">
             
-            <h1 className="text-[38px] sm:text-[50px] md:text-[62px] lg:text-[68px] font-sans font-normal text-[#111111] leading-[1.05] tracking-[-2px] text-left">
-              <VerticalCutReveal delay={40} stagger={30}>
-                Dedicated customer support teams for
-              </VerticalCutReveal>{" "}
+            {/* Punchy 2-Line Headline */}
+            <h1 className="text-[40px] sm:text-[52px] md:text-[60px] font-sans font-normal text-[#111111] leading-[1.04] tracking-[-1.8px] text-left">
+              Outsourced support that feels{" "}
               <span className="text-[#2563eb] italic font-serif font-light inline-block">
-                <VerticalCutReveal delay={200} stagger={35}>
-                  growing digital
-                </VerticalCutReveal>
-              </span>{" "}
-              <VerticalCutReveal delay={280} stagger={30}>
-                businesses.
-              </VerticalCutReveal>
+                in-house.
+              </span>
             </h1>
 
-            {/* Tight, Scannable 2-Line Subheading */}
-            <p className="font-serif italic font-light text-[18px] sm:text-[20px] text-[#555555] leading-relaxed max-w-2xl text-left">
-              We recruit, train, and manage dedicated bilingual support specialists in Kigali, Rwanda. They plug directly into your Zendesk, Intercom, or Gorgias—delivering world-class support at 65% lower overhead.
+            {/* Lean 1-Sentence Subtitle */}
+            <p className="font-serif italic font-light text-[18px] sm:text-[20px] text-[#555555] leading-snug max-w-xl text-left">
+              Dedicated bilingual agents in Kigali answering your tickets, live chat, and back-office queues at 65% less cost.
             </p>
 
-            {/* Action Row */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2 max-w-md">
+            {/* Primary Action Button Bar */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1 max-w-md">
               <button
                 onClick={onOpenBooking}
-                className="h-12 px-6 bg-[#111111] text-[#ffffff] font-medium text-[14px] rounded-xl hover:bg-[#222222] active:scale-95 transition-all flex items-center justify-center cursor-pointer group shadow-xs"
+                className="h-11 px-6 bg-[#111111] text-[#ffffff] font-medium text-[13px] rounded-xl hover:bg-[#222222] active:scale-95 transition-all flex items-center justify-center cursor-pointer group shadow-xs"
               >
                 <LetterSwap
                   label="Book a Discovery Call"
-                  icon={<Calendar className="w-4 h-4 text-[#dedbd6]" />}
+                  icon={<Calendar className="w-3.5 h-3.5 text-[#dedbd6]" />}
                 />
               </button>
               
               <a
                 href="#contact"
-                className="h-12 px-6 bg-[#ffffff] text-[#111111] font-medium text-[14px] rounded-xl border border-[#dedbd6] hover:bg-[#faf9f6] active:scale-95 transition-all flex items-center justify-center cursor-pointer group shadow-xs"
+                className="h-11 px-5 bg-[#ffffff] text-[#111111] font-medium text-[13px] rounded-xl border border-[#dedbd6] hover:bg-[#faf9f6] active:scale-95 transition-all flex items-center justify-center cursor-pointer group shadow-xs"
               >
                 <LetterSwap
-                  label="Send Support Requirements"
+                  label="Send Requirements"
                   icon={<ArrowRight className="w-3.5 h-3.5 text-[#888888]" />}
                 />
               </a>
             </div>
 
-            {/* Trust Highlights Checklist */}
-            <div className="flex flex-wrap items-center gap-y-2 gap-x-5 pt-3 text-[12px] font-mono text-[#666666]">
-              <div className="flex items-center gap-1.5">
+            {/* Scannable Stat Chips - Visual credibility without text blocks */}
+            <div className="grid grid-cols-3 gap-3 pt-3 max-w-lg">
+              <div className="bg-[#ffffff] border border-[#dedbd6] rounded-xl p-3 shadow-xs">
+                <div className="text-[18px] font-bold text-[#2563eb] font-mono leading-none">
+                  10-14d
+                </div>
+                <div className="text-[10.5px] font-mono text-[#666666] mt-1 uppercase tracking-tight">
+                  Pilot Launch
+                </div>
+              </div>
+
+              <div className="bg-[#ffffff] border border-[#dedbd6] rounded-xl p-3 shadow-xs">
+                <div className="text-[18px] font-bold text-[#111111] font-mono leading-none">
+                  65%
+                </div>
+                <div className="text-[10.5px] font-mono text-[#666666] mt-1 uppercase tracking-tight">
+                  Cost Savings
+                </div>
+              </div>
+
+              <div className="bg-[#ffffff] border border-[#dedbd6] rounded-xl p-3 shadow-xs">
+                <div className="text-[18px] font-bold text-[#2563eb] font-mono leading-none">
+                  &lt; 8%
+                </div>
+                <div className="text-[10.5px] font-mono text-[#666666] mt-1 uppercase tracking-tight">
+                  Team Churn
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Badges */}
+            <div className="flex items-center gap-4 pt-1 text-[11px] font-mono text-[#777777]">
+              <span className="flex items-center gap-1.5">
                 <Check className="w-3.5 h-3.5 text-[#2563eb]" />
-                <span>Bilingual (EN/FR)</span>
-              </div>
-              <span className="text-[#dedbd6]">·</span>
-              <div className="flex items-center gap-1.5">
+                EN & FR Fluent
+              </span>
+              <span>·</span>
+              <span className="flex items-center gap-1.5">
                 <Shield className="w-3.5 h-3.5 text-[#2563eb]" />
-                <span>Zendesk, Intercom, Gorgias</span>
-              </div>
-              <span className="text-[#dedbd6]">·</span>
-              <div className="flex items-center gap-1.5">
+                Zendesk / Intercom
+              </span>
+              <span>·</span>
+              <span className="flex items-center gap-1.5">
                 <Clock className="w-3.5 h-3.5 text-[#2563eb]" />
-                <span>14-Day Pilot</span>
-              </div>
+                14-Day Pilot
+              </span>
             </div>
 
           </div>
 
-          {/* Right Column (5 cols): Rich Visual Mosaic with Real Specialist Photos & Live Queue Telemetry */}
-          <div className="lg:col-span-5 relative">
+          {/* Right Column (6 cols): Visual Workstation UI with Live Specialist Imagery */}
+          <div className="lg:col-span-6 relative">
             <ScrollReveal direction="left" delay={150}>
-              <div className="relative space-y-4">
+              <div className="relative space-y-3.5">
                 
-                {/* Primary Card: Large Workstation Photo & Active Pod Status */}
-                <MagneticCard intensity={5} className="w-full">
-                  <div className="relative aspect-[16/11] rounded-2xl overflow-hidden border border-[#dedbd6] shadow-sm bg-white group">
+                {/* Visual Workstation Frame */}
+                <MagneticCard intensity={4} className="w-full">
+                  <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border border-[#dedbd6] shadow-md bg-white group">
                     <Image
                       src="/assets/059c3c0967b844a45fff7dfd28ba680d29d189d7-1480x1240.webp"
                       alt="HELIOS customer support operations pod in Kigali"
                       fill
                       className="object-cover group-hover:scale-102 transition-transform duration-500"
                       priority
-                      sizes="(max-width: 1024px) 100vw, 500px"
+                      sizes="(max-width: 1024px) 100vw, 600px"
                     />
 
-                    {/* Top Overlay Badge */}
-                    <div className="absolute top-3 left-3 bg-[#111111]/80 backdrop-blur-xs text-white text-[11px] font-mono px-3 py-1 rounded-full flex items-center gap-2 border border-white/20">
+                    {/* Top Status HUD */}
+                    <div className="absolute top-3 left-3 bg-[#111111]/85 backdrop-blur-xs text-white text-[10.5px] font-mono px-3 py-1 rounded-full flex items-center gap-2 border border-white/20">
                       <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                      <span>Kigali Operations Pod · Active</span>
+                      <span>Kigali Support Station · UTC+2 Active</span>
                     </div>
 
-                    {/* Bottom Live Queue HUD */}
-                    <div className="absolute bottom-3 left-3 right-3 bg-[#ffffff]/95 backdrop-blur-md p-3.5 rounded-xl border border-[#dedbd6] flex items-center justify-between text-[12px] shadow-xs">
-                      <div>
-                        <div className="font-mono text-[10px] text-[#888888] uppercase tracking-wider">
-                          Current Queue
-                        </div>
-                        <div className="font-semibold text-[#111111]">
-                          {activeQueueCount} tickets assigned
-                        </div>
+                    {/* Bottom Floating Telemetry Strip */}
+                    <div className="absolute bottom-3 left-3 right-3 bg-[#ffffff]/95 backdrop-blur-md px-4 py-2.5 rounded-xl border border-[#dedbd6] flex items-center justify-between text-[11.5px] shadow-xs">
+                      <div className="flex items-center gap-2">
+                        <Users className="w-4 h-4 text-[#2563eb]" />
+                        <span className="text-[#666666]">Queue:</span>
+                        <strong className="text-[#111111] font-mono">{activeQueueCount} active</strong>
                       </div>
                       <div className="text-right">
-                        <div className="font-mono text-[10px] text-[#888888] uppercase tracking-wider">
-                          Avg Response
-                        </div>
-                        <div className="font-semibold text-[#2563eb]">
-                          11m 40s (99.4% SLA)
-                        </div>
+                        <span className="text-[#666666]">Avg SLA:</span>{" "}
+                        <strong className="text-[#2563eb] font-mono">11m (99.4%)</strong>
                       </div>
                     </div>
                   </div>
                 </MagneticCard>
 
-                {/* Secondary Bottom Strip: Specialist Avatars + Kigali Hub Stamp */}
-                <div className="grid grid-cols-2 gap-4">
-                  {/* Photo Thumbnail 1 */}
-                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-[#dedbd6] shadow-xs group">
+                {/* 2 Bottom Specialist Photos */}
+                <div className="grid grid-cols-2 gap-3.5">
+                  <div className="relative aspect-[16/10] rounded-xl overflow-hidden border border-[#dedbd6] shadow-xs group">
                     <Image
                       src="/assets/f3537134afdca56c6c95cc7e598af56bbc3dfd87-600x825.webp"
-                      alt="Bilingual customer support specialist"
+                      alt="Senior bilingual customer support specialist"
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      sizes="240px"
+                      sizes="300px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-2.5">
-                      <span className="text-[11px] text-white font-mono font-medium">
-                        Senior Tier-1 Specialist
+                      <span className="text-[10px] text-white font-mono font-medium">
+                        Senior Tier-1 Specialist · Kigali
                       </span>
                     </div>
                   </div>
 
-                  {/* Photo Thumbnail 2 */}
-                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-[#dedbd6] shadow-xs group">
+                  <div className="relative aspect-[16/10] rounded-xl overflow-hidden border border-[#dedbd6] shadow-xs group">
                     <Image
                       src="/assets/33589346d03d1fe689cc38aaa4cfad8d7b849cb0-600x750.webp"
                       alt="Dedicated agent workflow"
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      sizes="240px"
+                      sizes="300px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-2.5">
-                      <span className="text-[11px] text-white font-mono font-medium">
-                        English & French Pod
+                      <span className="text-[10px] text-white font-mono font-medium">
+                        Bilingual Pod · EN / FR
                       </span>
                     </div>
                   </div>
@@ -195,8 +204,8 @@ export function Hero({ onOpenBooking }: { onOpenBooking: () => void }) {
       </div>
 
       {/* Elastic Line Divider */}
-      <div className="mt-14 max-w-7xl mx-auto px-6">
-        <ElasticLine height={28} strokeColor="#dedbd6" />
+      <div className="mt-12 max-w-7xl mx-auto px-6">
+        <ElasticLine height={24} strokeColor="#dedbd6" />
       </div>
     </section>
   );
