@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { X, Calendar, ShieldCheck, Loader2 } from "lucide-react";
 
 export function BookingModal({
@@ -12,6 +12,15 @@ export function BookingModal({
 }) {
   const [iframeLoaded, setIframeLoaded] = useState(false);
 
+  useEffect(() => {
+    if (isOpen) {
+      const timer = setTimeout(() => {
+        setIframeLoaded(true);
+      }, 1800);
+      return () => clearTimeout(timer);
+    }
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   return (
@@ -21,7 +30,7 @@ export function BookingModal({
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-200"
     >
       <div className="relative w-full max-w-4xl bg-[#faf9f6] border border-[#dedbd6] rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh]">
-        {/* Modal Header - Clean branded headline, zero 3rd-party vendor mentions */}
+        {/* Modal Header */}
         <div className="flex items-center justify-between px-6 py-4 bg-[#f1eee9] border-b border-[#dedbd6]">
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-xl bg-[#2563eb] flex items-center justify-center text-[#ffffff] shadow-xs">
@@ -48,9 +57,9 @@ export function BookingModal({
         {/* Modal Body: Active Booking Calendar Widget */}
         <div className="relative flex-1 min-h-[580px] bg-[#ffffff]">
           {!iframeLoaded && (
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-[#faf9f6] z-10 text-[#666666]">
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-[#faf9f6] z-10 text-[#666666] pointer-events-none transition-opacity duration-300">
               <Loader2 className="w-6 h-6 text-[#2563eb] animate-spin" />
-              <span className="text-[13px] font-mono">Loading available calendar dates...</span>
+              <span className="text-[13px] font-mono">Connecting to live calendar...</span>
             </div>
           )}
           <iframe
@@ -58,13 +67,13 @@ export function BookingModal({
             title="Discovery Consultation Scheduler"
             width="100%"
             height="100%"
-            className="w-full h-[580px] border-0 bg-transparent"
+            className="w-full h-[580px] border-0 bg-transparent relative z-0"
             allow="camera; microphone; autoplay; encrypted-media"
             onLoad={() => setIframeLoaded(true)}
           />
         </div>
 
-        {/* Modal Footer - Enterprise assurance */}
+        {/* Modal Footer */}
         <div className="px-6 py-3 bg-[#f1eee9] border-t border-[#dedbd6] text-[11px] text-[#666666] flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-3.5 h-3.5 text-[#2563eb]" />
