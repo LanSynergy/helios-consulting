@@ -1,26 +1,176 @@
 @import "tailwindcss";
 
+@theme {
+  --color-electric-violet: #2563eb;
+  --color-pure-white: #ffffff;
+  --color-canvas-cream: #faf9f6;
+  --color-linen: #f1eee9;
+  --color-stone: #d3cec6;
+  --color-hairline: #dedbd6;
+  --color-ink: #111111;
+  --color-carbon: #000000;
+  --color-iron: #414141;
+  --color-graphite: #585858;
+  --color-smoke: #888888;
+  --color-ash: #a0a0a0;
+  --color-silver: #b8b8b8;
+
+  --color-helpdesk: #2563eb;
+  --color-fin: #ff5a43;
+
+  --font-saans: var(--font-saans), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-saansmono: var(--font-saansmono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-serrif: var(--font-serrif), Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-helpdesk: #2563eb;
+  --color-fin: #ff5a43;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #faf9f6;
+  color: #111111;
+  font-family: var(--font-saans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-saans {
+  font-family: var(--font-saans);
+}
+
+.font-mono-saans {
+  font-family: var(--font-saansmono);
+}
+
+.font-serrif {
+  font-family: var(--font-serrif);
+}
+
+.badge-label {
+  font-family: var(--font-saansmono);
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+/* Intercom authentic autoplay progress animation */
+@keyframes carouselAutoplay {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.animate-autoplay {
+  animation: carouselAutoplay 6000ms linear forwards;
+}
+
+/* Marquee infinite scroll */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Subtle floating animation for hero vignettes */
+@keyframes subtleFloatLeft {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-1deg);
+  }
+}
+
+@keyframes subtleFloatRight {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+.float-vignette-1 {
+  animation: subtleFloatLeft 6s ease-in-out infinite;
+}
+
+.float-vignette-2 {
+  animation: subtleFloatRight 7s ease-in-out infinite;
+}
+
+/* Living Radar Sweep */
+@keyframes radarSweep {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-radar-sweep {
+  animation: radarSweep 4s linear infinite;
+}
+
+/* Living Pulse Wave */
+@keyframes livingPulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+  }
+}
+
+.animate-living-pulse {
+  animation: livingPulse 2.5s infinite;
+}
+
+/* Live ticket audio wave simulation */
+@keyframes soundWave {
+  0%, 100% {
+    height: 4px;
+  }
+  50% {
+    height: 16px;
+  }
+}
+
+.animate-sound-wave-1 {
+  animation: soundWave 0.8s ease-in-out infinite;
+}
+.animate-sound-wave-2 {
+  animation: soundWave 1.1s ease-in-out 0.2s infinite;
+}
+.animate-sound-wave-3 {
+  animation: soundWave 0.9s ease-in-out 0.4s infinite;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
