@@ -21,8 +21,8 @@ export function FaqSection({ onOpenBooking }: { onOpenBooking: () => void }) {
       a: "Our Kigali hub operates on Central Africa Time (CAT / UTC+2). This provides natural 100% core-hours overlap with the UK and Europe (GMT / CET) and prime morning coverage for US East Coast teams. We can also schedule dedicated evening, weekend, or 24/7 coverage pods based on your volume.",
     },
     {
-      q: "What languages do your specialists speak?",
-      a: "All HELIOS customer operations specialists are fluent bilingual speakers in English and French. We support transatlantic SaaS and e-commerce companies serving English-speaking and Francophone global markets.",
+      q: "What shift coverage models do you offer?",
+      a: "We offer 8×5 standard business hours, 16×5 extended coverage, and 24/7/365 follow-the-sun customer operations pods depending on your volume and SLA needs.",
     },
     {
       q: "Can we begin with a trial or fixed-scope pilot?",

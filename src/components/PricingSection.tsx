@@ -9,13 +9,13 @@ export function PricingSection({ onOpenBooking }: { onOpenBooking: () => void })
   // Interactive scope estimator states
   const [agents, setAgents] = useState(2);
   const [coverageHours, setCoverageHours] = useState<"8x5" | "16x5" | "24x7">("8x5");
-  const [isBilingual, setIsBilingual] = useState(false);
+  const [isDedicated, setIsDedicated] = useState(false);
 
   // Approximate hourly rate calculation
   const hourlyBase = 12; // $12/hr starting
   const hoursPerMonth = coverageHours === "8x5" ? 170 : coverageHours === "16x5" ? 340 : 720;
-  const bilingualMultiplier = isBilingual ? 1.15 : 1.0;
-  const estimatedMonthly = Math.round(agents * hoursPerMonth * hourlyBase * bilingualMultiplier);
+  const dedicatedMultiplier = isDedicated ? 1.15 : 1.0;
+  const estimatedMonthly = Math.round(agents * hoursPerMonth * hourlyBase * dedicatedMultiplier);
 
   return (
     <section className="py-24 md:py-36 bg-[#faf9f6] border-t border-[#dedbd6]" id="pricing">
@@ -228,19 +228,19 @@ export function PricingSection({ onOpenBooking }: { onOpenBooking: () => void })
                 </div>
               </div>
 
-              {/* Language toggle */}
+              {/* QA toggle */}
               <div className="bg-[#ffffff] p-5 rounded-xl border border-[#dedbd6] flex flex-col justify-between">
                 <span className="text-[13px] font-medium text-[#111111] block mb-1">
-                  Bilingual Pod (FR/EN)
+                  Dedicated QA Oversight
                 </span>
                 <label className="flex items-center gap-2 cursor-pointer text-[13px] text-[#585858]">
                   <input
                     type="checkbox"
-                    checked={isBilingual}
-                    onChange={(e) => setIsBilingual(e.target.checked)}
+                    checked={isDedicated}
+                    onChange={(e) => setIsDedicated(e.target.checked)}
                     className="accent-[#2563eb] cursor-pointer w-4 h-4"
                   />
-                  <span>French + English fluency</span>
+                  <span>Weekly QA & CSAT reports</span>
                 </label>
               </div>
             </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { ArrowUpRight, Check, Heart, ShieldCheck, Award, Sparkles } from "lucide-react";
 import { ScrollReveal } from "./fancy/ScrollReveal";
@@ -42,7 +42,7 @@ export function AboutSection({ onOpenBooking }: { onOpenBooking: () => void }) {
                 </p>
 
                 <p className="text-[13.5px] text-[#666666] leading-relaxed pt-1 font-normal">
-                  We recruit bilingual university graduates, pay them competitive career wages, and provide structured training. Our agents become a seamless extension of your internal team, working directly in your Zendesk, Intercom, or Gorgias queues with complete transparency.
+                  We recruit top university graduates, pay them competitive career wages, and provide structured training. Our agents become a seamless extension of your internal team, working directly in your Zendesk, Intercom, or Gorgias queues with complete transparency.
                 </p>
               </div>
 
@@ -60,21 +60,21 @@ export function AboutSection({ onOpenBooking }: { onOpenBooking: () => void }) {
             </ScrollReveal>
           </div>
 
-          {/* Real Black Customer Support Team Photography Right (6 cols) */}
+          {/* Real Customer Support Team Photography Right (6 cols) */}
           <div className="lg:col-span-6">
             <ScrollReveal direction="left" delay={150}>
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-[#dedbd6] shadow-xs group">
                   <Image
                     src="/assets/agent_black_woman_headset_4.jpg"
-                    alt="African customer service representative with headset smiling at desk"
+                    alt="Customer service representative with headset smiling at desk"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500 object-center"
                     sizes="300px"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-3.5">
                     <span className="text-white text-xs font-mono font-medium">
-                      Bilingual Specialists · Kigali
+                      Customer Operations · Kigali
                     </span>
                   </div>
                 </div>

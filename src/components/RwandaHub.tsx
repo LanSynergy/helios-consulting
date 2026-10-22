@@ -54,12 +54,12 @@ export function RwandaHub({ onOpenBooking }: { onOpenBooking: () => void }) {
       desc: "Operating on Central Africa Time (CAT / UTC+2). This means 100% full-day overlap with the UK and Europe (GMT / CET) and early morning coverage for US East Coast teams.",
     },
     {
-      title: "Educated, Bilingual Talent Pool",
-      desc: "Rwanda's university graduates are fluent in both English and French, making them ideal for companies serving global, transatlantic customer bases.",
+      title: "Educated, Career-Driven Talent Pool",
+      desc: "Rwanda's university graduates bring exceptional professional discipline, strong communication skills, and high domain retention.",
     },
     {
       title: "Fast Fiber & Reliable Power",
-      desc: "Kigali features modern telecom backbones, redundant fiber-optic internet, and over 99% grid stability, supported by strong national digital infrastructure investments.",
+      desc: "Kigali features modern telecom backbones, redundant fiber-optic internet, and over 99% grid stability, supported by national digital infrastructure.",
     },
     {
       title: "Strict Privacy & GDPR Alignment",
@@ -82,7 +82,7 @@ export function RwandaHub({ onOpenBooking }: { onOpenBooking: () => void }) {
           <div className="lg:col-span-7 space-y-6">
             <ScrollReveal>
               <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#eceae5] border border-[#dedbd6] rounded-full">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-[#eceae5] border border-[#dedbd6] rounded-full">
                   <span className="relative flex h-2 w-2">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2563eb] opacity-75" />
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-[#2563eb]" />
@@ -104,7 +104,7 @@ export function RwandaHub({ onOpenBooking }: { onOpenBooking: () => void }) {
 
             {/* Kigali Photo Feature Frame with Living Radar Telemetry */}
             <ScrollReveal delay={150}>
-              <div className="relative h-64 sm:h-72 w-full rounded-xl overflow-hidden border border-[#dedbd6] shadow-xs group">
+              <div className="relative h-64 sm:h-72 w-full rounded-2xl overflow-hidden border border-[#dedbd6] shadow-xs group">
                 <Image
                   src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1000&q=80"
                   alt="Commercial and technology district of Kigali, Rwanda"
@@ -122,10 +122,10 @@ export function RwandaHub({ onOpenBooking }: { onOpenBooking: () => void }) {
 
                 <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/85 via-transparent to-transparent flex items-end p-5">
                   <div className="flex items-center justify-between w-full">
-                    <span className="text-[#ffffff] text-[12px] font-medium bg-[#111111]/80 px-3 py-1.5 rounded-xl border border-[#dedbd6]/30 backdrop-blur-sm">
+                    <span className="text-[#ffffff] text-[12px] font-medium bg-[#111111]/80 px-3 py-1.5 rounded-full border border-[#dedbd6]/30 backdrop-blur-sm">
                       Kigali Operations Station · UTC+2 Central Africa Time
                     </span>
-                    <span className="font-mono text-[10px] text-emerald-300 bg-emerald-950/60 px-2 py-1 rounded-md border border-emerald-500/40">
+                    <span className="font-mono text-[10px] text-emerald-300 bg-emerald-950/60 px-2.5 py-1 rounded-full border border-emerald-500/40">
                       STATION ONLINE
                     </span>
                   </div>
@@ -138,7 +138,7 @@ export function RwandaHub({ onOpenBooking }: { onOpenBooking: () => void }) {
               {hubPillars.map((adv, idx) => (
                 <ScrollReveal key={idx} delay={idx * 80}>
                   <MagneticCard intensity={4} className="h-full">
-                    <div className="bg-[#faf9f6] border border-[#dedbd6] p-5 rounded-xl space-y-2 hover:border-[#111111]/30 transition-colors h-full">
+                    <div className="bg-[#faf9f6] border border-[#dedbd6] p-5 rounded-2xl space-y-2 hover:border-[#111111]/30 transition-colors h-full">
                       <div className="flex items-center gap-2 text-[#111111] font-medium text-[13px]">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#2563eb]" />
                         <span>{adv.title}</span>
@@ -156,11 +156,11 @@ export function RwandaHub({ onOpenBooking }: { onOpenBooking: () => void }) {
               <div className="pt-2">
                 <button
                   onClick={onOpenBooking}
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#111111] text-[#ffffff] text-[13px] font-medium hover:bg-[#222222] active:scale-95 transition-all cursor-pointer group shadow-xs"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#111111] text-[#ffffff] text-[13px] font-medium hover:bg-[#222222] active:scale-95 transition-all cursor-pointer group shadow-xs"
                 >
                   <Calendar className="w-4 h-4 text-[#dedbd6]" />
                   <LetterSwap
-                    label="Confirm Timezone Fit with our team"
+                    label="Confirm Timezone Fit on Calendar"
                     icon={<ArrowUpRight className="w-3.5 h-3.5 text-[#dedbd6]" />}
                   />
                 </button>
@@ -171,7 +171,7 @@ export function RwandaHub({ onOpenBooking }: { onOpenBooking: () => void }) {
           {/* Timezone Synchronizer Right Console */}
           <div className="lg:col-span-5">
             <ScrollReveal direction="left" delay={150}>
-              <div className="bg-[#faf9f6] border border-[#dedbd6] rounded-xl p-6 space-y-6 shadow-xs">
+              <div className="bg-[#faf9f6] border border-[#dedbd6] rounded-2xl p-6 space-y-6 shadow-xs">
                 
                 <div className="flex items-center justify-between pb-4 border-b border-[#dedbd6]">
                   <div className="space-y-0.5">
@@ -182,13 +182,13 @@ export function RwandaHub({ onOpenBooking }: { onOpenBooking: () => void }) {
                       Real-Time Shift Alignment
                     </div>
                   </div>
-                  <span className="px-2.5 py-1 rounded-xl bg-[#ffffff] border border-[#dedbd6] font-mono text-[11px] text-[#2563eb] flex items-center gap-1.5 shadow-xs">
+                  <span className="px-2.5 py-1 rounded-full bg-[#ffffff] border border-[#dedbd6] font-mono text-[11px] text-[#2563eb] flex items-center gap-1.5 shadow-xs">
                     <Radio className="w-3 h-3 text-[#2563eb] animate-pulse" /> LIVE TELEMETRY
                   </span>
                 </div>
 
                 {/* Kigali Main Clock Box */}
-                <div className="border border-[#dedbd6] rounded-xl p-5 bg-[#ffffff] space-y-2 shadow-xs">
+                <div className="border border-[#dedbd6] rounded-2xl p-5 bg-[#ffffff] space-y-2 shadow-xs">
                   <div className="flex items-center justify-between">
                     <span className="font-mono text-[11px] uppercase font-medium text-[#888888] tracking-wider">
                       HELIOS Station · Kigali
@@ -231,7 +231,7 @@ export function RwandaHub({ onOpenBooking }: { onOpenBooking: () => void }) {
                 </div>
 
                 {/* Number Ticker Operational Metrics Card */}
-                <div className="p-5 rounded-xl bg-[#eceae5] border border-[#dedbd6] space-y-3 text-[12px]">
+                <div className="p-5 rounded-2xl bg-[#eceae5] border border-[#dedbd6] space-y-3 text-[12px]">
                   <div className="font-mono text-[10px] uppercase tracking-[1.4px] text-[#666666] font-medium pb-2 border-b border-[#dedbd6]">
                     Kigali Hub Performance Metrics
                   </div>
@@ -265,8 +265,8 @@ export function RwandaHub({ onOpenBooking }: { onOpenBooking: () => void }) {
                   </div>
 
                   <div className="pt-2 text-[11px] text-[#555555] flex items-center justify-between">
-                    <span>Languages Supported:</span>
-                    <strong className="font-mono text-[#111111]">Fluent English · French</strong>
+                    <span>Operational Availability:</span>
+                    <strong className="font-mono text-[#111111]">Follow-The-Sun 24/7 Coverage</strong>
                   </div>
                 </div>
 

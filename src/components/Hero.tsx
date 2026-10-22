@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { Check, Shield, Clock, ArrowRight, Calendar, Users, Sparkles, Headphones } from "lucide-react";
+import { Check, Shield, Clock, ArrowRight, Calendar, Users, Headphones } from "lucide-react";
 import { LetterSwap } from "./fancy/LetterSwap";
 import { ElasticLine } from "./fancy/ElasticLine";
 import { MagneticCard } from "./fancy/MagneticCard";
@@ -27,12 +27,12 @@ export function Hero({ onOpenBooking }: { onOpenBooking: () => void }) {
           <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-[#eceae5] border border-[#dedbd6] rounded-full shadow-xs">
             <span className="w-2 h-2 rounded-full bg-[#2563eb] animate-pulse" />
             <span className="font-mono text-[10px] tracking-[1.4px] uppercase text-[#111111] font-semibold">
-              KIGALI CUSTOMER SUPPORT PODS · BILINGUAL (EN/FR)
+              KIGALI CUSTOMER SUPPORT PODS · MANAGED OPERATIONS
             </span>
           </div>
         </div>
 
-        {/* Asymmetrical 2-Column Grid (Ramp & Intercom Mobbin Pattern) */}
+        {/* Asymmetrical 2-Column Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
           {/* Left Column (6 cols): Ultra-punchy, low cognitive load */}
@@ -48,7 +48,7 @@ export function Hero({ onOpenBooking }: { onOpenBooking: () => void }) {
 
             {/* Lean 1-Sentence Subtitle */}
             <p className="font-serif italic font-light text-[18px] sm:text-[20px] text-[#555555] leading-snug max-w-xl text-left">
-              Dedicated bilingual customer service specialists in Kigali answering your tickets, live chat, and back-office queues at 65% less cost.
+              Dedicated customer service specialists in Kigali answering your tickets, live chat, and back-office queues at 65% less cost.
             </p>
 
             {/* Primary Action Button Bar */}
@@ -108,7 +108,7 @@ export function Hero({ onOpenBooking }: { onOpenBooking: () => void }) {
             <div className="flex items-center gap-4 pt-1 text-[11px] font-mono text-[#777777]">
               <span className="flex items-center gap-1.5">
                 <Check className="w-3.5 h-3.5 text-[#2563eb]" />
-                EN & FR Fluent
+                Dedicated Pods
               </span>
               <span>·</span>
               <span className="flex items-center gap-1.5">
@@ -124,12 +124,12 @@ export function Hero({ onOpenBooking }: { onOpenBooking: () => void }) {
 
           </div>
 
-          {/* Right Column (6 cols): Real Black Customer Support Specialists with Headsets in Action */}
+          {/* Right Column (6 cols): Real Customer Support Specialists with Headsets */}
           <div className="lg:col-span-6 relative">
             <ScrollReveal direction="left" delay={150}>
               <div className="relative space-y-3.5">
                 
-                {/* Primary Card: Real Black Customer Support Specialist Wearing Headset on Live Shift */}
+                {/* Primary Card */}
                 <MagneticCard intensity={4} className="w-full">
                   <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border border-[#dedbd6] shadow-md bg-white group">
                     <Image
@@ -162,12 +162,12 @@ export function Hero({ onOpenBooking }: { onOpenBooking: () => void }) {
                   </div>
                 </MagneticCard>
 
-                {/* 2 Bottom Specialist Photos: Black Specialists at Workstations */}
+                {/* 2 Bottom Specialist Photos */}
                 <div className="grid grid-cols-2 gap-3.5">
                   <div className="relative aspect-[16/10] rounded-xl overflow-hidden border border-[#dedbd6] shadow-xs group">
                     <Image
                       src="/assets/agent_black_man_headset_1.jpg"
-                      alt="Black customer support representative with headset providing technical support"
+                      alt="Customer support representative with headset providing technical support"
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500 object-center"
                       sizes="300px"
@@ -182,14 +182,14 @@ export function Hero({ onOpenBooking }: { onOpenBooking: () => void }) {
                   <div className="relative aspect-[16/10] rounded-xl overflow-hidden border border-[#dedbd6] shadow-xs group">
                     <Image
                       src="/assets/agent_black_woman_headset_2.jpg"
-                      alt="Bilingual support agent with headset handling live inquiries on laptop"
+                      alt="Support agent with headset handling live inquiries on laptop"
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500 object-center"
                       sizes="300px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-2.5">
                       <span className="text-[10px] text-white font-mono font-medium">
-                        Bilingual Specialist · EN / FR
+                        Operations Specialist · Kigali
                       </span>
                     </div>
                   </div>

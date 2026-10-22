@@ -9,7 +9,7 @@ const CHALLENGES = [
     impact:
       "Recruiting, onboarding, and retaining in-house US or European support specialists consumes $65,000–$85,000+ per agent annually, constraining runway.",
     solution:
-      "HELIOS provides dedicated, bilingual support pods from Kigali at a fraction of domestic overhead, without compromising communication quality.",
+      "HELIOS provides dedicated, dedicated support pods from Kigali at a fraction of domestic overhead, without compromising communication quality.",
   },
   {
     friction: "Legacy BPO Quality Degradation",
@@ -41,7 +41,7 @@ const PROCESS_STEPS = [
   {
     num: "03",
     title: "Specialist Matching & Vetting",
-    detail: "We handpick university-educated, bilingual specialists with domain familiarity matching your exact industry vertical.",
+    detail: "We handpick university-educated, dedicated specialists with domain familiarity matching your exact industry vertical.",
   },
   {
     num: "04",

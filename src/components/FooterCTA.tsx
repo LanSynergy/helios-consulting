@@ -40,7 +40,7 @@ export function FooterCTA({ onOpenBooking }: { onOpenBooking: () => void }) {
       <div className="absolute right-[5%] bottom-[14%] hidden lg:block w-[125px] aspect-[4/5] rounded-xl overflow-hidden border border-[#dedbd6] shadow-sm">
         <Image
           src="/assets/b74422e2810cec5a7a9629cdff2a2eaf1f432fe2-423x525.webp"
-          alt="Bilingual customer support team member"
+          alt="Dedicated customer support team member"
           fill
           className="object-cover"
           sizes="125px"
@@ -52,7 +52,7 @@ export function FooterCTA({ onOpenBooking }: { onOpenBooking: () => void }) {
         KIGALI HUB<br />
         DISPATCH<br />
         SYNCED UTC+2<br />
-        EN / FR TIER 1
+        Managed TIER 1
       </div>
       {/* Centered Editorial CTA */}
       <div className="relative max-w-4xl mx-auto px-6 text-center z-10 space-y-8">
@@ -65,7 +65,7 @@ export function FooterCTA({ onOpenBooking }: { onOpenBooking: () => void }) {
         </h2>
 
         <p className="font-serif italic font-light text-[18px] sm:text-[21px] text-[#555555] max-w-2xl mx-auto leading-relaxed">
-          Embed bilingual Rwandan talent, documented SOP governance, and continuous QA auditing into your frontline customer support workflows.
+          Embed dedicated Rwandan talent, documented SOP governance, and continuous QA auditing into your frontline customer support workflows.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">

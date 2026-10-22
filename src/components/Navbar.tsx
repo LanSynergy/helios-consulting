@@ -19,21 +19,21 @@ export function Navbar({ onOpenBooking }: { onOpenBooking: () => void }) {
   const companyLinks = [
     { label: "Kigali Operations Base", href: "#rwanda", desc: "UTC+2 / CAT synchronized hub in East Africa" },
     { label: "Security & DPA Framework", href: "#security", desc: "RBAC, device encryption & EU GDPR alignment" },
-    { label: "8 Core Operational Principles", href: "#about", desc: "Accountability, precision & customer focus" },
+    { label: "Core Operational Principles", href: "#about", desc: "Accountability, precision & customer focus" },
     { label: "Frequently Asked Questions", href: "#faq", desc: "Onboarding, tooling, SLAs and pilot scopes" },
     { label: "Policies & Transparency", href: "#legal", desc: "DPA framework, privacy & website terms" },
   ];
 
   return (
     <>
-      {/* Top Banner - Authentic Intercom layout: quiet, non-cramped */}
+      {/* Top Banner - Authentic quiet layout */}
       <aside className="relative flex items-center justify-center gap-2 overflow-hidden px-4 py-2.5 text-center text-xs text-[#111111] bg-[#eceae5] border-b border-[#dedbd6]">
         <div className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[1.2px]">
           <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#2563eb] animate-pulse" />
           <span>Kigali Hub</span>
           <span className="text-[#888888]">·</span>
           <span className="font-sans font-normal normal-case text-xs tracking-normal text-[#444444]">
-            Bilingual frontline support & back-office pods. Q2 onboarding slots now open.
+            Dedicated frontline customer support & back-office pods. Onboarding slots open.
           </span>
           <button
             onClick={onOpenBooking}
@@ -55,7 +55,7 @@ export function Navbar({ onOpenBooking }: { onOpenBooking: () => void }) {
                 <HeliosLogo size="md" />
               </Link>
 
-              {/* Center Navigation - Spaced and Airy */}
+              {/* Center Navigation */}
               <nav className="hidden lg:flex items-center gap-8 text-[14px] text-[#222222]">
                 {primaryLinks.map((item) => (
                   <a
@@ -83,7 +83,7 @@ export function Navbar({ onOpenBooking }: { onOpenBooking: () => void }) {
 
                   {dropdownOpen && (
                     <div className="absolute top-full -left-4 pt-2 w-80 animate-in fade-in duration-150 z-50">
-                      <div className="bg-[#ffffff] border border-[#dedbd6] rounded-xl p-2 shadow-lg space-y-0.5">
+                      <div className="bg-[#ffffff] border border-[#dedbd6] rounded-2xl p-2 shadow-lg space-y-0.5">
                         {companyLinks.map((link) => (
                           <a
                             key={link.label}
@@ -119,7 +119,7 @@ export function Navbar({ onOpenBooking }: { onOpenBooking: () => void }) {
 
               <button
                 onClick={onOpenBooking}
-                className="inline-flex items-center justify-center h-10 px-4 py-0 bg-[#111111] text-[#ffffff] text-[13px] font-medium rounded-full hover:bg-[#222222] transition-colors cursor-pointer group"
+                className="inline-flex items-center justify-center h-10 px-4 py-0 bg-[#111111] text-[#ffffff] text-[13px] font-medium rounded-xl hover:bg-[#222222] transition-colors cursor-pointer group"
               >
                 <LetterSwap
                   label="Schedule Call"
@@ -132,7 +132,7 @@ export function Navbar({ onOpenBooking }: { onOpenBooking: () => void }) {
             <div className="flex lg:hidden items-center gap-3">
               <button
                 onClick={onOpenBooking}
-                className="inline-flex items-center gap-1.5 h-9 px-3 bg-[#111111] text-[#ffffff] text-[12px] font-medium rounded-full"
+                className="inline-flex items-center gap-1.5 h-9 px-3 bg-[#111111] text-[#ffffff] text-[12px] font-medium rounded-xl"
               >
                 <Calendar className="w-3 h-3" />
                 <span>Schedule</span>
@@ -199,7 +199,7 @@ export function Navbar({ onOpenBooking }: { onOpenBooking: () => void }) {
                 }}
                 className="w-full py-2.5 bg-[#111111] text-[#ffffff] text-[13px] rounded-xl font-medium"
               >
-                Schedule Call with our team
+                Schedule Call on Calendar
               </button>
             </div>
           </div>

@@ -27,7 +27,7 @@ const newsreader = Newsreader({
 export const metadata: Metadata = {
   title: "HELIOS Customer Operations | Rwandan Outsourcing Rigor",
   description:
-    "Flexible, high-touch customer support and back-office operations from Kigali, Rwanda. Vetted bilingual specialists, transparent pricing, and rigorous SLA governance.",
+    "Flexible, high-touch customer support and back-office operations from Kigali, Rwanda. Vetted dedicated specialists, transparent pricing, and rigorous SLA governance.",
 };
 
 export default function RootLayout({

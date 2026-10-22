@@ -13,8 +13,8 @@ export function TrustStrip() {
     },
     {
       icon: Users,
-      title: "Fluent Bilingual Talent",
-      desc: "University-educated agents fluent in English and French",
+      title: "Vetted Dedicated Talent",
+      desc: "University-educated career specialists trained on your product",
     },
     {
       icon: Laptop,

@@ -23,7 +23,7 @@ export function ServicesSection({ onOpenBooking }: { onOpenBooking: () => void }
       points: [
         "First-response time under 15 minutes during shift",
         "Structured tagging for bug triage and engineering escalation",
-        "Fluent English and French bilingual coverage",
+        "Continuous macro updates based on customer repeats",
       ],
       image: "/assets/agent_black_woman_headset_3.jpg",
       imageCaption: "Dedicated representative answering customer email inquiries",
