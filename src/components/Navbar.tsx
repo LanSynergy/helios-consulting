@@ -26,23 +26,6 @@ export function Navbar({ onOpenBooking }: { onOpenBooking: () => void }) {
 
   return (
     <>
-      {/* Top Banner - Authentic quiet layout */}
-      <aside className="relative flex items-center justify-center gap-2 overflow-hidden px-4 py-2.5 text-center text-xs text-[#111111] bg-[#eceae5] border-b border-[#dedbd6]">
-        <div className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[1.2px]">
-          <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#2563eb] animate-pulse" />
-          <span>Kigali Hub</span>
-          <span className="text-[#888888]">·</span>
-          <span className="font-sans font-normal normal-case text-xs tracking-normal text-[#444444]">
-            Dedicated frontline customer support & back-office pods. Onboarding slots open.
-          </span>
-          <button
-            onClick={onOpenBooking}
-            className="inline-flex items-center gap-1 font-sans text-xs font-medium text-[#2563eb] hover:underline cursor-pointer ml-1 group"
-          >
-            <LetterSwap label="Schedule scoping call" icon={<ArrowRight className="w-3 h-3" />} />
-          </button>
-        </div>
-      </aside>
 
       {/* Main Sticky Navbar */}
       <header className="sticky top-0 z-40 bg-[#faf9f6]/95 backdrop-blur-md border-b border-[#dedbd6]">

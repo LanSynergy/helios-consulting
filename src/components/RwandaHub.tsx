@@ -102,37 +102,6 @@ export function RwandaHub({ onOpenBooking }: { onOpenBooking: () => void }) {
               </div>
             </ScrollReveal>
 
-            {/* Kigali Photo Feature Frame with Living Radar Telemetry */}
-            <ScrollReveal delay={150}>
-              <div className="relative h-64 sm:h-72 w-full rounded-2xl overflow-hidden border border-[#dedbd6] shadow-xs group">
-                <Image
-                  src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1000&q=80"
-                  alt="Commercial and technology district of Kigali, Rwanda"
-                  fill
-                  className="object-cover object-center group-hover:scale-102 transition-transform duration-700"
-                  sizes="(max-width: 1024px) 100vw, 600px"
-                />
-
-                {/* Living radar sweep overlay */}
-                <div className="absolute top-4 right-4 w-12 h-12 rounded-full border border-white/40 bg-black/40 backdrop-blur-xs flex items-center justify-center overflow-hidden">
-                  <div className="absolute inset-0 rounded-full border border-emerald-400/30 animate-ping" />
-                  <div className="absolute w-full h-0.5 bg-gradient-to-r from-transparent via-emerald-400 to-transparent animate-radar-sweep" />
-                  <Compass className="w-5 h-5 text-emerald-400 z-10" />
-                </div>
-
-                <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/85 via-transparent to-transparent flex items-end p-5">
-                  <div className="flex items-center justify-between w-full">
-                    <span className="text-[#ffffff] text-[12px] font-medium bg-[#111111]/80 px-3 py-1.5 rounded-full border border-[#dedbd6]/30 backdrop-blur-sm">
-                      Kigali Operations Station · UTC+2 Central Africa Time
-                    </span>
-                    <span className="font-mono text-[10px] text-emerald-300 bg-emerald-950/60 px-2.5 py-1 rounded-full border border-emerald-500/40">
-                      STATION ONLINE
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </ScrollReveal>
-
             {/* Strategic Pillars with Magnetic Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               {hubPillars.map((adv, idx) => (
