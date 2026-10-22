@@ -22,15 +22,6 @@ export function Hero({ onOpenBooking }: { onOpenBooking: () => void }) {
     <section className="relative overflow-hidden bg-[#faf9f6] pt-10 pb-16 md:pt-14 md:pb-20 border-b border-[#dedbd6]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         
-        {/* Top Operational Pill Tag */}
-        <div className="mb-5">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-[#eceae5] border border-[#dedbd6] rounded-full shadow-xs">
-            <span className="w-2 h-2 rounded-full bg-[#2563eb] animate-pulse" />
-            <span className="font-mono text-[10px] tracking-[1.4px] uppercase text-[#111111] font-semibold">
-              KIGALI CUSTOMER SUPPORT PODS · MANAGED OPERATIONS
-            </span>
-          </div>
-        </div>
 
         {/* Asymmetrical 2-Column Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
